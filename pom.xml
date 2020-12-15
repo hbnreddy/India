@@ -229,16 +229,15 @@
                 <dependency>
                     <groupId>org.apache.marmotta</groupId>
                     <artifactId>marmotta-ldcache-kiwi</artifactId>
-                   
+                    <version>${marmotta.version}</version>
+                </dependency>
+                            
                    <!-- https://mvnrepository.com/artifact/org.sonarsource.sonarqube/sonar-plugin-api -->
 <dependency>
     <groupId>org.sonarsource.sonarqube</groupId>
     <artifactId>sonar-plugin-api</artifactId>
     <version>8.6.0.39681</version>
 </dependency>
-
-                    <version>${marmotta.version}</version>
-                </dependency>
                 <dependency>
                     <groupId>org.apache.marmotta</groupId>
                     <artifactId>marmotta-reasoner-kiwi</artifactId>

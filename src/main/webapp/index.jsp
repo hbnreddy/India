@@ -1,25 +1,27 @@
-<%--
+<form action="action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements. See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership. The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
-        http://www.apache.org/licenses/LICENSE-2.0
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
---%>
-<%@ page import="org.apache.marmotta.platform.core.api.config.ConfigurationService" %>
-<%@ page import="org.apache.marmotta.platform.core.util.CDIContext" %>
-<%
-    ConfigurationService configurationService = CDIContext.getInstance(ConfigurationService.class);
-    response.sendRedirect(configurationService.getServerUri()+configurationService.getStringConfiguration("kiwi.pages.startup"));
-%>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
